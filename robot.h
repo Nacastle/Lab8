@@ -5,6 +5,7 @@ using std::string;
 
 class Robot
 {
+protected:
 	string serie;
 	string material;
 	double amperios;

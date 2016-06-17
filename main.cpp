@@ -101,6 +101,10 @@ int main(int argc, char const *argv[]) {
 		}else if (opcion == 5)
 		{
 			dia++;
+			int usar;
+			cout << "Seleccione que robot desea usar: " << endl;
+			cin >> usar;
+			comprados.at(usar)->trabajo(dinero,amperios,comprados.size());
 		}else if (opcion == 6)
 		{
 			for (int i = 0; i < comprados.size(); ++i)

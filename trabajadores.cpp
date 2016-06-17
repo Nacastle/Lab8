@@ -10,7 +10,10 @@ Trabajadores::Trabajadores(string serie, string material, double amperios, doubl
 
 }
 
-
+void Trabajadores::trabajo(double& dinero, double& amperaje, int robot){
+	dinero-=200;
+	amperaje-= this->amperios;
+}
 
 string Trabajadores::toString()const{
 	stringstream ss;

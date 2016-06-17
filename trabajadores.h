@@ -8,4 +8,5 @@ public:
 	Trabajadores(string, string, double, double);
 	string toString()const;
 	~Trabajadores();
+	void trabajo(double&,double&,int);
 };
