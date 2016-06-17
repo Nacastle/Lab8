@@ -22,4 +22,5 @@ public:
 	void setMarterial(string);
 	void setAmperios(double);
 	void setPrecio(double);
+	virtual void trabajo(double&,double&,int)=0;
 };
