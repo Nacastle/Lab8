@@ -11,7 +11,7 @@ class Robot
 	double precio;
 public:
 	Robot(string, string, double, double);
-	string toString()const;
+	virtual string toString()const;
 	~Robot();
 	string getSerie();
 	string getMaterial();
