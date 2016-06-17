@@ -56,7 +56,21 @@ int main(int argc, char const *argv[]) {
 		}else if (opcion == 2)
 		{
 			//dia++;
-
+			for (int i = 0; i < producidos.size(); ++i)
+			{
+				cout << i << "- " << producidos[i]->toString() << endl;
+			}
+			int opcionModificar;
+			cout << "Ingrese la posicion a Modificar: " << endl;
+			cin >> opcionModificar;
+			double amperaje,precios;
+			cout << "Ingerse el nuevo amperaje: " << endl;
+			cin >> amperaje;
+			cout << "Ingrese el nuevo precio: " << endl;
+			cin >> precios;
+			producidos[opcionModificar]->setAmperios(amperaje);
+			producidos[opcionModificar]->setPrecio(precios);
+			cout << "Robot modificado excitosamente" << endl;
 		}else if (opcion == 3)
 		{
 			//dia++;
@@ -77,7 +91,9 @@ int main(int argc, char const *argv[]) {
 			{
 				cout << i << "- " << producidos[i]->toString() << endl;
 			}
+
 			cin >> posicion1;
+			double dinero = dinero - (producidos[posicion1]->getPrecio());
 			comprados.push_back(producidos[posicion1]);
 			producidos.erase(producidos.begin()+posicion1);
 			cout << "Felicidades a realizado su compra exitosamente." << endl;
