@@ -8,4 +8,5 @@ public:
 	Abastecedores(string, string, double, double);
 	string toString()const;
 	~Abastecedores();
+	void trabajo(double&,double&,int);
 };

@@ -10,6 +10,11 @@ Abastecedores::Abastecedores(string serie, string material, double amperios, dou
 	
 }
 
+void Abastecedores::trabajo(double& dinero, double& amperaje, int robot){
+	dinero-=robot*100;
+	amperaje-= this->amperios;
+}
+
 string Abastecedores::toString()const{
 	stringstream ss;
 	ss << "Abastecedores: " << Robot::toString();

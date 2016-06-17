@@ -17,6 +17,11 @@ void Sirviente::setOxido(int oxido){
 	this->oxido = oxido;
 }
 
+void Sirviente::trabajo(double& dinero, double& amperaje, int robot){
+	this->oxido += 5;
+	amperaje-= this->amperios;
+}
+
 string Sirviente::toString()const{
 	stringstream ss;
 	ss << "Sirviente: " << Robot::toString() << "oxido: " << oxido;

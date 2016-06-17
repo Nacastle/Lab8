@@ -11,4 +11,5 @@ public:
 	~Sirviente();
 	int getOxido();
 	void setOxido(int);
+	void trabajo(double&,double&,int);
 };
