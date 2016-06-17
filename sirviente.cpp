@@ -10,10 +10,10 @@ Sirviente::Sirviente(string serie, string material, double amperios, double prec
 	this->oxido = oxido;
 }
 
-int getOxido(){
+int Sirviente::getOxido(){
 	return oxido;
 }
-void setOxido(int oxido){
+void Sirviente::setOxido(int oxido){
 	this->oxido = oxido;
 }
 

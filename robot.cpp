@@ -12,28 +12,28 @@ Robot::Robot(string serie, string material, double amperios, double precio){
 	this->precio = precio;
 }
 
-string getSerie(){
+string Robot::getSerie(){
 	return serie;
 }
-string getMaterial(){
+string Robot::getMaterial(){
 	return material;
 }
-double getAmperios(){
+double Robot::getAmperios(){
 	return amperios;
 }
-double getPrecio(){
+double Robot::getPrecio(){
 	return precio;
 }
-void setSerie(string serie){
+void Robot::setSerie(string serie){
 	this->serie = serie;
 }
-void setMarterial(string material){
+void Robot::setMarterial(string material){
 	this->material = material;
 }
-void setAmperios(double amperios){
+void Robot::setAmperios(double amperios){
 	this->amperios = amperios;
 }
-void setPrecio(double precio){
+void Robot::setPrecio(double precio){
 	this->precio = precio;
 }
 

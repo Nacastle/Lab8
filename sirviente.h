@@ -1,6 +1,5 @@
 #pragma once
 #include "robot.h"
-#include "sirviente.h"
 #include <iostream>
 #include <string>
 

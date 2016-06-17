@@ -6,27 +6,14 @@
 using std::string;
 using std::stringstream;
 
-Trabajadores::Trabajadores(string serie, string material, double amperios, double precio, double ganado, double gastado):Robot(serie, material, amperios, precio){
-	this->ganado = ganado;
-	this->gastado = gastado;
+Trabajadores::Trabajadores(string serie, string material, double amperios, double precio):Robot(serie, material, amperios, precio){
+
 }
 
-double getGanado(){
-	return ganado;
-}
 
-double getGastado(){
-	return gastado;
-}
-void setGastado(double ganado){
-	this->ganado = ganado;
-}
-void setGanado(double gastado){
-	this->gastado = gastado;
-}
 
-string Sirviente::toString()const{
+string Trabajadores::toString()const{
 	stringstream ss;
-	ss << "Trabajadores: " << Robot::toString() << "Ganado: " << ganado << "Gastado: " << gastado;
+	ss << "Trabajadores: " << Robot::toString();
 	return ss.str();
 }

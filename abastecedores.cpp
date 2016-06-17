@@ -6,19 +6,12 @@
 using std::string;
 using std::stringstream;
 
-Abastecedores::Abastecedores(string serie, string material, double amperios, double precio, double derrochador):Robot(serie, material, amperios, precio){
-	this->derrochador = derrochador;
+Abastecedores::Abastecedores(string serie, string material, double amperios, double precio):Robot(serie, material, amperios, precio){
+	
 }
 
-double getDerrochador(){
-	return derrochador;
-}
-void setDerrochador(double derrochador){
-	this->derrochador = derrochador;
-}
-
-string Sirviente::toString()const{
+string Abastecedores::toString()const{
 	stringstream ss;
-	ss << "Abastecedores: " << Robot::toString() << "Gasta: " << derrochador;
+	ss << "Abastecedores: " << Robot::toString();
 	return ss.str();
 }
