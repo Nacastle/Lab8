@@ -39,6 +39,6 @@ void Robot::setPrecio(double precio){
 
 string Robot::toString()const{
 	stringstream ss;
-	ss << "Robot: " << serie << material << amperios << precio;
+	ss << "\nRobot: " << "\nSerie: " << serie << "\nMaterial: "<< material << "\namperios: " << amperios << "\nprecio: " <<precio;
 	return ss.str();
 }

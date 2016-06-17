@@ -4,17 +4,19 @@
 #include "sirviente.h"
 #include "abastecedores.h"
 #include <string>
+#include <vector>
 using std::cin;
 using std::cout;
 using std::endl;
+using std::vector;
 
 int main(int argc, char const *argv[]) {
 	int dia=0;
 	double dinero = 15000;
 	double amperios = 20000;
 	int opcion;
-	std::vector<robot*> producidos;
-	std::vector<robot*> comrpados;
+	vector<Robot*> producidos;
+	vector<Robot*> comprados;
 	while(opcion != 7){
 		cout << "Dia: " << dia << endl;
 		cout << "Dinero: " << dinero << endl;
@@ -40,14 +42,14 @@ int main(int argc, char const *argv[]) {
 			cin >> opcion;
 			if (opcion == 1)
 			{
-				producidos.push_back(new trabajadores(serie,material,amperios,precio));
+				producidos.push_back(new Trabajadores(serie,material,amperios,precio));
 				cout << "Se ha creado el Trabajador exitosamente" << endl;
 			}else if (opcion == 2)
 			{
-				producidos.push_back(new sirviente(serie,material,amperios,precio,0));
+				producidos.push_back(new Sirviente(serie,material,amperios,precio,0));
 				cout << "Se ha creado el Sirviente exitosamente" << endl;
 			}else{
-				producidos.push_back(new abastecedores(serie,material,amperios,precio));
+				producidos.push_back(new Abastecedores(serie,material,amperios,precio));
 				cout << "Se ha creado el Abastecedor exitosamente" << endl;
 			}
 			//dinero = dinero-50;
@@ -60,7 +62,7 @@ int main(int argc, char const *argv[]) {
 			//dia++;
 			for (int i = 0; i < producidos.size(); ++i)
 			{
-				cout << i << producidos[i]->toString() << endl;
+				cout << i << "- " << producidos[i]->toString() << endl;
 			}
 			int opcionEliminar;
 			cout << "Ingrese la posicion a Eliminar: " << endl;
@@ -69,12 +71,30 @@ int main(int argc, char const *argv[]) {
 		}else if (opcion == 4)
 		{
 			//dia++;
+			int posicion1;
+			cout << "Quer robot desea comprar? " << endl;
+			for (int i = 0; i < producidos.size(); ++i)
+			{
+				cout << i << "- " << producidos[i]->toString() << endl;
+			}
+			cin >> posicion1;
+			comprados.push_back(producidos[posicion1]);
+			producidos.erase(producidos.begin()+posicion1);
+			cout << "Felicidades a realizado su compra exitosamente." << endl;
+
 		}else if (opcion == 5)
 		{
 			dia++;
 		}else if (opcion == 6)
 		{
-			//dia++;
+			for (int i = 0; i < comprados.size(); ++i)
+			{
+				cout << i << "- " << comprados[i]->toString() << endl;
+			}
+			int opcionEliminar1;
+			cout << "Ingrese la posicion a Eliminar: " << endl;
+			cin >> opcionEliminar1;
+			comprados.erase(comprados.begin()+opcionEliminar1);
 		}else{
 			cout << "Gracias por utilizar este programa :3 (Estoy siendo amigable :3)" << endl;
 		}
